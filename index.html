@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru" class="no-touch-device is-loaded js-priority">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Онлайн касса Uz smart</title>
+		<meta name="description" content="Мой магазин">
+ 
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/app.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext&display=swap" media="screen and (min-width: 767px)">
+ 
+<style>
+:root {font-size: 10px; } @media (max-width: 479px) {:root {font-size: 9px; }}
+.app {overflow: hidden;position: relative;min-height: 100%;transition: opacity 0.25s;opacity: 0;}
+body {font: 400 1.4rem/1.714 "Roboto", Helvetica, Arial, als_rublregular, sans-serif;}
+button,input,optgroup,select,textarea,.fancybox-container {font-family: "Roboto", Helvetica, Arial, als_rublregular, sans-serif;}
+	
+.logo img,.footer__logo img,.seo__logo img {
+    max-height: 1.6rem; /* For demo */
+}
+
+.logo {
+	min-width: 15rem;
+}
+@media (min-width: 992px) {
+	.header--v5 .logo {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+} 
+	
+</style>
+
+<!-- For demo start -->
+<style>
+.is-demo-open .demo{-ms-transform:translate(0,0);transform:translate(0,0)}.is-demo-open .demo__body{box-shadow:0 1.0rem 2.0rem rgba(0,0,0,.1)}.demo{position:fixed;top:0;left:0;z-index:9999;transition:0.25s;-ms-transform:translate(-100%,0);transform:translate(-100%,0)}.demo__body{width:60.0rem;min-height:100vh;overflow:hidden;background:#fff;transition:0.25s;max-width:100vw}.demo__toggle{display:block;position:fixed;border:none;padding:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;transition:0.25s;left:0;top:20.0rem;background:#3B55E6;color:#fff;width:5.4rem;height:5.4rem;cursor: pointer;z-index:9999}.demo__toggle .icon-demo-open{position:absolute;top:50%;left:50%;-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.demo__toggle .icon-demo-open{width:2.0rem;height:2.0rem}.demo__body-back:hover{background:#e8e8e8}.demo__toggle:hover{box-shadow:0 .2rem 1rem rgba(0,0,0,0.25)}@media (max-width:479px){.demo__toggle{display:none}}.demo__body-header{font-size:1.8rem;line-height:3.0rem;font-weight:500;border-bottom:0.1rem solid #E8E8E8;height:7.1rem;padding:2.1rem 2.0rem 2.1rem 10.0rem}.demo__body-back{display:block;position:absolute;top:0;left:0;width:7.0rem;height:7.0rem;border:none;background:#F7F7F7;text-align:center;line-height:7.0rem;cursor:pointer;transition:0.25s}.demo__body-back [class^="icon-"]{-ms-transform:rotate(180deg);transform:rotate(180deg)}.demo .tabs__menu li{width:33.333%}.demo .tabs__btn{width:100%;padding:.7rem 1.4rem .7rem 1.4rem;border-right:.1rem solid #dcdcdc}.demo .tabs__content{padding:2.0rem;padding-top:0;overflow:auto;height:calc(100vh - 13.6rem)}.demo .tabs__menu{margin:0 -.1rem 2.8rem 0}.demo .tabs__btn.is-active:after{background:#fff}.demo .tabs__btn.is-active:hover:after{background:#fff}.demo .tabs__btn:hover:after{background:#DCDCDC}.demo .ui-check{margin:0 0 2.6rem}.demo .ui-check b{position:absolute;left:0;top:2.2rem;width:1.5rem;text-align:center}.demo .ui-check img{border:.1rem solid #F2F2F2;transition:0.25s;border-radius:.2rem;padding:.4rem}.demo .ui-check:hover img{border-color:rgba(54,96,188,.5)}.demo .ui-check__input:checked~img{border-color:#3660BC}.demo .ui-check .theme-color{display:block;width:calc(100% + 2.6rem);height:5.0rem;margin:1.0rem 0rem 0 -2.5rem;border:.1rem solid #F2F2F2;transition:0.25s;padding:.4rem;border-radius:.2rem}.demo .ui-check:hover .theme-color{border-color:rgba(54,96,188,.5)}.demo .ui-check__input:checked~.theme-color{border-color:#3660BC}.demo .theme-color input{text-align:center;height:100%;outline:0;border:0;width:100%;padding:0}.demo .main-color-1,.demo .main-color-2,.demo .main-color-3{width:33.3333%;border:0;height:100%;float:left}.demo-pages{display:block;border:.1rem solid #F2F2F2;transition:0.25s;padding:.4rem;border-radius:.2rem;margin-bottom:3.0rem}.demo-pages:hover{border-color:rgba(54,96,188,.5)}.demo-pages span{display:block;text-align:center;padding:.4rem 0;margin-top:1.0rem;color:#343434}.demo-pages:hover span{color:#7097ec}.demo .ui-check--inline{margin-right:1.5rem}
+</style>
+<!-- For demo end -->
+
+	<style type="text/css"> [data-readmore]{transition: height 75ms;overflow: hidden;}</style>
+</head>
+  <body class="page-homepage">
+    <div class="app app--v1">
+      <!-- Popups :: Start-->
+	  <!--noindex-->
+      <div class="popup popup--890" style="display: none;" id="signin">
+        <button class="popup__close" data-fancybox-close="">
+          
+        </button>
+        <div class="signin">
+          <div class="row">
+            <div class="col-12 col-md-6 push-md-6 col-lg col-lg-7 push-lg-0">
+              <div class="signin__head"><span class="signin__title">Авторизация</span></div>
+              <div class="signin__body">
+                <form action="" enctype="multipart/form-data" id="loginform" method="post">
+                  <label class="ui-label">Электронная почта</label>
+                  <div class="ui-field">
+                    <input class="ui-input" type="email" name="email" placeholder="Электронная почта" required="">
+                  </div>
+                  <label class="ui-label">Пароль</label>
+                  <div class="ui-field">
+                    <input class="ui-input" type="password" name="password" placeholder="Пароль" required="">
+					<a href="#d">Забыли пароль?</a>
+                  </div>
+                  <div class="signin__action">
+					<button class="btn btn--blue" form="loginform" type="submit">Войти</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6 pull-md-6 col-lg pull-lg-0">
+              <div class="signin__head"><span class="signin__title">Регистрация</span></div>
+              <div class="signin__body">
+                   <p>Создание учетной записи поможет делать следующие покупки быстрее (не надо будет снова вводить адрес и контактную информацию), видеть состояние заказа, а также видеть заказы, сделанные ранее. Вы также сможете накапливать при покупках призовые баллы (на них тоже можно что-то купить), а постоянным покупателям мы предлагаем систему скидок.</p>
+                  <div class="signin__action">
+					<a class="btn btn--transparent" href="#">Регистрация</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  <!--/noindex-->
+      <!-- Popups :: End-->
+	        <!-- Header v1 :: Start-->
+      <header class="header header--v1">
+        <div class="topbar">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col col-xl-2">
+                <div class="logo">
+								<a href="#"><img src="./images/logo.png" title="Техникс" alt="Техникс"></a>
+								</div>
+							</div>
+						
+              <div class="col-hidden col-sm-visible col-xl-3 push-xl-4">
+								<div class="phone js-toggle">
+				
+									<button class="phone__btn js-toggle-btn">+(99871) 256 78 40</button>
+										
+									<a class="phone__link js-fancy-popup" href="#">Обратный звонок</a>
+
+									<div id="inline" class="popup popup--570" style="display:none;">
+										<div class="writeus"><span class="writeus__heading">Заказать обратный звонок</span>
+											<div class="writeus__form">
+												<form class="data-callback">
+													<label class="ui-label required">Ваше имя:</label>
+													<div class="ui-field">
+														<input class="ui-input" type="text" value="" name="name" placeholder="Ваше имя:">
+													</div>
+													<label class="ui-label required">Ваш телефон:</label>
+													<div class="ui-field">
+														<input class="ui-input" type="text" value="" name="phone" placeholder="Ваш телефон:">
+													</div>
+													<label class="ui-label">Комментарий: </label>
+													<div class="ui-field">
+														<textarea class="ui-textarea" name="comment" cols="30" rows="10" placeholder="Комментарий: " style="overflow: hidden; overflow-wrap: break-word;"></textarea>
+													</div>
+										
+													<div class="writeus__action">
+														<button type="button" class="btn btn--blue contact-send">Отправить</button>
+													</div>
+										
+												</form>
+											</div>
+										</div>
+									</div>
+							
+
+									<div class="phone__dropdown js-toggle-dropdown">
+										<ul class="phone__menu">															
+											<li><a class="phone__menu-link" rel="nofollow" href="tel:+77547845245">+(99890) 000 01 01</a></li>															
+											<li><a class="phone__menu-link" rel="nofollow" href="tel:+78549654568">+(99897) 111 01 11</a></li>	
+										</ul>  
+									</div> 
+                 
+	              </div>
+
+							</div>
+							
+              <div class="col-hidden col-md-visible col-xl-4 pull-xl-3">
+                <div class="search js-search">
+                    <button class="search__btn">
+                     
+                    </button>
+                    <div class="search__wrapper">
+                      <div class="search__wrapper-in">
+											<button class="search__send">
+                        
+											</button>
+                        <button class="search__close">
+                        
+                        </button>
+                        <input class="search__input js-search-input" name="search" value="" type="search" placeholder="Что будем искать" autocomplete="off"><div class="search__dropdown"></div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-hidden col-md-visible col-auto">
+                <div class="ctrl">
+				 
+                  <div class="acc js-toggle">
+                    <button class="acc__btn js-toggle-btn">
+                      Мой аккаунт <span id="wishcomptotall" class="acc__counter" style="display:none;">0</span>
+                    </button>
+                    <div class="acc__dropdown js-toggle-dropdown">
+                      
+                    </div>
+                  </div>
+				              <div class="lang js-toggle">
+									<form action="" method="post" enctype="multipart/form-data" id="form-language">
+												<button class="lang__btn js-toggle-btn">
+														
+												<img src="./images/ru-ru.png" alt="RU " title="RU "> RU 
+																												</button>
+												<div class="lang__dropdown js-toggle-dropdown">
+													<ul class="lang__menu">
+														<li data-lang="ru-ru"><a class="lang__link" href="#"><img src="./images/ru-ru.png" alt="RU " title="RU "> RU </a></li>
+														<li data-lang="en-gb"><a class="lang__link" href="#"><img src="./images/uz.png" alt="EN " title="EN "> EN </a></li>
+													</ul>
+												</div>
+									<input type="hidden" name="code" value="">
+									<input type="hidden" name="redirect" value="eyJyb3V0ZSI6ImNvbW1vblwvaG9tZSIsInVybCI6IiIsInByb3RvY29sIjoiMSJ9">
+								</form>
+              </div>
+
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+        <nav class="nav ">
+          <div class="container-fluid">
+            <div class="nav__mobile">
+              <ul class="nav__menu">
+                <li><a class="nav__link nav__link--arrow" href="#">
+                   Меню</a>
+                  <div class="nav__dropdown nav__dropdown--list">
+                    <div class="nav__list">
+                      <div class="nav__list-head">
+                        <button class="nav__list-close">
+                          
+                        </button><b class="nav__list-heading">Категории</b>
+                      </div>
+                      <div class="nav__list-body">
+                        <ul class="nav__list-menu"></ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__priority priority-nav priority-nav-has-dropdown">
+              <ul class="nav__menu js-priority">
+								<li><a class="nav__link" href="#">Продукция</a></li>
+								<li><a class="nav__link" href="#">О компании</a></li>
+								<li><a class="nav__link" href="#">Партнёры</a></li>
+								<li><a class="nav__link" href="#">Вакансии</a></li>
+								<li><a class="nav__link" href="#">СТО</a></li>
+								<li><a class="nav__link" href="#">Контакты</a></li>
+							</ul>
+
+            </div>
+						<div class="search js-search">
+								<button class="search__btn">
+									
+								</button>
+								<div class="search__wrapper">
+									<div class="search__wrapper-in">
+									<button class="search__send">					
+									</button>
+										<button class="search__close">
+										</button>
+										<input class="search__input js-search-input" name="search" value="" type="search" placeholder="Что будем искать" autocomplete="off">
+										<div class="search__dropdown"></div>
+									</div>
+								</div>
+						</div>
+                <div class="ctrl"></div>
+          </div>
+        </nav>
+      </header>
+      <!-- Header v1 :: End-->
+
+               
+	<main class="content">
+	 
+    <!-- Slides :: Start-->
+      <div class="slider">
+				<div class="slides slides--width-full">
+
+					<div class="slides__item slides__item--1">
+						<figure class="slides__item-image"><img src="./images/slide01.jpg" alt="" ></figure>
+						<div class="container-fluid">
+							<div class="slides__item-desc">
+							<h2 class="slides__item-title">UzSmart</h2>
+							<p class="slides__item-price">700 990 сум</p>
+							
+							<a class="btn btn--sm btn--white" href="" tabindex="0">ПОДРОБНЕЕ</a>
+							
+							</div>
+						</div>
+					</div>
+
+					<div class="slides__item slides__item--2">
+						<figure class="slides__item-image"><img src="./images/0-1920x570.jpg" alt="" ></figure>
+						<div class="container-fluid">
+							<div class="slides__item-desc">
+							<h2 class="slides__item-title">UzSmart 2</h2>
+							<p class="slides__item-price">750 790 сум</p>
+							
+							<a class="btn btn--sm btn--white" href="" tabindex="0">ПОДРОБНЕЕ</a>
+							
+							</div>
+						</div>
+					</div>
+
+				
+				</div>
+      </div>
+    <!-- Slides :: End--> 
+ 
+      
+ 
+
+
+
+
+ <!-- Products :: Start-->
+	<div class="products">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 class="products__heading">Наша продукция</h2>
+				</div>
+			</div>
+
+			<div class="products__slides">
+
+				<div class="products__item">
+					<div class="products__item-in">
+
+						<div class="products__item-images">
+							<a href="#"><img src="./images/uzsmart-bank-3.png" alt=""></a>
+						</div>
+						<span class="products__item-category">9653269371</span>
+						<div class="products__item-desc">		
+								<a href="#" class="products__item-title" tabindex="0">UzSmart Bank</a>
+							<span class="products__item-price">	690 200 сум	</span>	
+							<div class="products__item-action">
+								<button type="button" class="btn btn--cart" title="Купить">Купить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="products__item">
+					<div class="products__item-in">
+
+						<div class="products__item-images">
+							<a href="#"><img src="./images/uzsmart-bank-1.png" alt=""></a>
+						</div>
+						<span class="products__item-category">9653269371</span>
+						<div class="products__item-desc">		
+								<a href="#" class="products__item-title" tabindex="0">UzSmart Bank</a>
+							<span class="products__item-price">	910 000 сум	</span>	
+							<div class="products__item-action">
+								<button type="button" class="btn btn--cart" title="Купить">Купить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="products__item">
+					<div class="products__item-in">
+
+						<div class="products__item-images">
+							<a href="#"><img src="./images/uzsmart-bank-2.png" alt=""></a>
+						</div>
+						<span class="products__item-category">9653269371</span>
+						<div class="products__item-desc">		
+								<a href="#" class="products__item-title" tabindex="0">UzSmart Bank</a>
+							<span class="products__item-price">	290 000 сум	</span>	
+							<div class="products__item-action">
+								<button type="button" class="btn btn--cart" title="Купить">Купить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="products__item">
+					<div class="products__item-in">
+
+						<div class="products__item-images">
+							<a href="#"><img src="./images/uzsmart-bank-1.png" alt=""></a>
+						</div>
+						<span class="products__item-category">9653269371</span>
+						<div class="products__item-desc">		
+								<a href="#" class="products__item-title" tabindex="0">UzSmart Bank</a>
+							<span class="products__item-price">	290 000 сум	</span>	
+							<div class="products__item-action">
+								<button type="button" class="btn btn--cart" title="Купить">Купить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+<!-- Products :: End-->
+
+
+<!-- Banner :: Start-->
+<div class="container-fluid">
+	<a class="banner banner--1170x150" href="#">
+		<img src="https://severpost.ru/docs/upload/2019/05/1558539213.jpg" alt="">
+		<p class="banner__caption">Онлайн касса <br>арена <b>Uz smart</b></p>
+	</a>
+</div>
+<!-- Banner :: End--> 
+
+		<!-- Info :: Start-->
+		<div class="info">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="products__heading">Наши преимущества</h2>
+					</div>
+					<div class="col-xl-12">
+						<div class="row justify-content-center">
+							<div class="col-sm-4">
+				
+							<a class="info__item" href="#">
+								<?xml version="1.0"?>
+								<svg xmlns="http://www.w3.org/2000/svg" id="line" width="50" height="50" viewBox="0 0 64 64"><path d="M58,25H56V22a7.986,7.986,0,0,0-12-6.918A7.986,7.986,0,0,0,32,22v3H30a3,3,0,0,0-3,3V58a5.006,5.006,0,0,0,5,5H48a5.006,5.006,0,0,0,5-5V28a3,3,0,0,0-3-3H48V22a7.968,7.968,0,0,0-2.257-5.556A5.993,5.993,0,0,1,54,22v3h-.026A5.012,5.012,0,0,1,55,28V58a6.973,6.973,0,0,1-2.111,5H56a5.006,5.006,0,0,0,5-5V28A3,3,0,0,0,58,25ZM34,22a5.993,5.993,0,0,1,8.257-5.556A7.968,7.968,0,0,0,40,22v3H34Zm12,0v3H42V22a5.983,5.983,0,0,1,2-4.46A5.983,5.983,0,0,1,46,22Z" style="fill:#c4a2fc"/><path d="M52.16,12.438l-6.734-10.1A3,3,0,0,0,42.93,1H13.07a3,3,0,0,0-2.5,1.336L3.84,12.437A4.979,4.979,0,0,0,3,15.211V48a3,3,0,0,0,3,3H50a3,3,0,0,0,3-3V15.211A4.974,4.974,0,0,0,52.16,12.438Zm-8.4-8.993L50.131,13H35.824L33.88,3h9.05A1,1,0,0,1,43.762,3.445ZM22,15H34V26.277l-5.5-3.145a1,1,0,0,0-.992,0L22,26.277ZM31.843,3l1.944,10H22.213L24.157,3Zm-19.6.445A1,1,0,0,1,13.07,3h9.05L20.176,13H5.868ZM51,48a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1V15.211c0-.071.01-.141.015-.211H20V28a1,1,0,0,0,1.5.868L28,25.152l6.5,3.716A1,1,0,0,0,36,28V15H50.985c.005.07.015.14.015.211Z" style="fill:#151a6a"/><path d="M18,38H11a3,3,0,0,0-3,3v2a3,3,0,0,0,3,3h7a3,3,0,0,0,3-3V41A3,3,0,0,0,18,38Zm1,5a1,1,0,0,1-1,1H11a1,1,0,0,1-1-1V41a1,1,0,0,1,1-1h7a1,1,0,0,1,1,1Z" style="fill:#151a6a"/></svg> 
+								Доставка в течение 2-3 дней с момента заказа  
+							</a>
+					
+							</div>
+
+							<div class="col-sm-4">
+				
+								<div class="info__item">
+									<svg id="Line" height="50" viewBox="0 0 64 64" width="50" xmlns="http://www.w3.org/2000/svg"><circle cx="40.5" cy="41" fill="#c4a2fc" r="4"/><path d="m40.5 19a22 22 0 1 0 22 22 22 22 0 0 0 -22-22zm-9.9 33.31a1 1 0 0 1 -1.41 0 16 16 0 0 1 11.31-27.31 1 1 0 0 1 .89 1.45l-3 6a1 1 0 1 1 -1.78-.9l2.22-4.45a14 14 0 0 0 -8.23 23.8 1 1 0 0 1 0 1.41zm3.9-11.31a6 6 0 1 1 6 6 6 6 0 0 1 -6-6zm17.31 11.31a15.86 15.86 0 0 1 -11.31 4.69 1 1 0 0 1 -.89-1.45l3-6a1 1 0 0 1 1.78.9l-2.22 4.45a14 14 0 0 0 8.23-23.8 1 1 0 0 1 1.41-1.41 16 16 0 0 1 0 22.62z" fill="#c4a2fc"/><path d="m28.5 51h-6.56a3.22 3.22 0 0 1 -3.21-3.17v-3.33l-6.23-3.6-2.9 1.63a3.21 3.21 0 0 1 -4.35-1.19l-3.32-5.68a3.22 3.22 0 0 1 1.14-4.37l2.86-1.69v-7.2l-2.86-1.69a3.22 3.22 0 0 1 -1.14-4.37l3.28-5.68a3.21 3.21 0 0 1 4.35-1.19l2.9 1.63 6.23-3.6v-3.33a3.22 3.22 0 0 1 3.25-3.17h6.56a3.22 3.22 0 0 1 3.21 3.17v3.33l6.29 3.6 2.9-1.63a3.22 3.22 0 0 1 4.36 1.19l3.28 5.68a3.23 3.23 0 0 1 -1.15 4.37l-2.89 1.69v7.2l2.86 1.69a3.23 3.23 0 0 1 1.15 4.37l-3.28 5.68a3.22 3.22 0 0 1 -4.36 1.19l-2.87-1.63-6.22 3.6v3.33a3.22 3.22 0 0 1 -3.28 3.17zm-15.5-12.11 7.21 4.16a1 1 0 0 1 .5.86l.05 3.89a1.21 1.21 0 0 0 1.18 1.2h6.56a1.22 1.22 0 0 0 1.21-1.2v-3.89a1 1 0 0 1 .5-.86l7.22-4.16a1 1 0 0 1 1 0l3.39 1.91a1.22 1.22 0 0 0 1.65-.45l3.28-5.68a1.22 1.22 0 0 0 -.41-1.67l-3.34-2a1 1 0 0 1 -.49-.86v-8.31a1 1 0 0 1 .49-.83l3.35-2a1.22 1.22 0 0 0 .44-1.65l-3.29-5.69a1.22 1.22 0 0 0 -1.65-.45l-3.39 1.91a1 1 0 0 1 -1 0l-7.21-4.12a1 1 0 0 1 -.5-.86v-3.89a1.22 1.22 0 0 0 -1.25-1.25h-6.56a1.21 1.21 0 0 0 -1.21 1.2l-.05 3.89a1 1 0 0 1 -.5.86l-7.18 4.16a1 1 0 0 1 -1 0l-3.4-1.91a1.21 1.21 0 0 0 -1.64.45l-3.3 5.69a1.22 1.22 0 0 0 .43 1.66l3.35 2a1 1 0 0 1 .49.86v8.34a1 1 0 0 1 -.49.86l-3.35 1.94a1.22 1.22 0 0 0 -.43 1.65l3.28 5.68a1.21 1.21 0 0 0 1.64.45l3.42-1.9a1 1 0 0 1 1 .01zm12.22-3.89a9 9 0 1 1 9-9 9 9 0 0 1 -9 9zm0-16a7 7 0 1 0 7 7 7 7 0 0 0 -7-7z" fill="#151a6a"/></svg>
+									Возврат и обмен товара в течение 30 дней
+								</div>
+				
+							</div>
+							
+							<div class="col-sm-4">
+							<div class="info__item">
+								<svg id="line" height="50" viewBox="0 0 64 64" width="50" xmlns="http://www.w3.org/2000/svg"><path d="m62.328 21.056-23-8a.984.984 0 0 0 -.656 0l-23 8a1 1 0 0 0 -.666 1.044l.974 9.74c2.291 22.915 22.214 30.75 22.573 31.06a1 1 0 0 0 .894 0c.992-.806 20.176-7.08 22.355-28.861l1.198-11.939a1 1 0 0 0 -.672-1.044zm-11.55 11.626-14.448 11.739a2 2 0 0 1 -2.675-.138l-6.586-6.583a2 2 0 0 1 2.831-2.831l5.311 5.311 13.049-10.6a2 2 0 0 1 2.521 3.1z" fill="#c4a2fc"/><g fill="#151a6a"><path d="m48.412 39-5.726-5.725a20.989 20.989 0 1 0 -38.686-11.275 20.855 20.855 0 0 0 3.31 11.274l-5.724 5.726a2 2 0 0 0 .97 3.363l4.95 1.13 1.13 4.95a2 2 0 0 0 3.364.97l7.236-7.236a20.586 20.586 0 0 0 11.525 0l7.239 7.236a2 2 0 0 0 3.363-.97l1.13-4.952 4.95-1.129a2 2 0 0 0 .969-3.362zm-37.826 9-1.129-4.953a2.015 2.015 0 0 0 -1.506-1.5l-4.951-1.134 5.484-5.485a21.088 21.088 0 0 0 8.645 6.528zm-4.586-26a19 19 0 1 1 19 19 19.021 19.021 0 0 1 -19-19zm36.044 19.542a2.013 2.013 0 0 0 -1.5 1.5l-1.132 4.958-6.544-6.543a21.079 21.079 0 0 0 8.645-6.528l5.487 5.484z"/><path d="m33.716 16.559-3.77-.548-1.686-3.417a3.638 3.638 0 0 0 -6.523 0l-1.686 3.417-3.771.548a3.636 3.636 0 0 0 -2.015 6.2l2.729 2.66-.644 3.756a3.638 3.638 0 0 0 5.276 3.833l3.374-1.771 3.372 1.773a3.637 3.637 0 0 0 5.277-3.833l-.649-3.756 2.73-2.66a3.637 3.637 0 0 0 -2.014-6.202zm.62 4.77-3.1 3.027a1 1 0 0 0 -.287.885l.733 4.274a1.636 1.636 0 0 1 -2.382 1.725l-3.838-2.017a1 1 0 0 0 -.931 0l-3.831 2.017a1.635 1.635 0 0 1 -2.374-1.725l.733-4.274a1 1 0 0 0 -.288-.885l-3.1-3.027a1.635 1.635 0 0 1 .906-2.792l4.292-.623a1 1 0 0 0 .753-.547l1.919-3.888a1.635 1.635 0 0 1 2.935 0l1.919 3.888a1 1 0 0 0 .753.547l4.291.623a1.636 1.636 0 0 1 .897 2.792z"/></g></svg>
+								Гарантия качества материалов
+							</div>
+							</div>
+					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Info :: End--> 
+ 
+		<!-- Media :: Start-->
+        <div class="media">
+          <div class="container-fluid">
+            <div class="media__head">
+              <h2 class="media__heading">Новости</h2><a class="media__link" href="#">Все новости</a>
+            </div>
+            <div class="media__slides">
+							<div>
+								<a class="news__item" href="#">
+									<h2 class="news__item-title">МКС предложили сделать гостиницей для космических туристов</h2>
+									<p class="news__item-text">Генеральный директор ракетно-космической корпорации "Энергия" Владимир Солнцев предложил использоват..</p>
+									<span class="news__item-time">15 Октября, 2019 </span>
+								</a>
+							</div>
+
+							<div>
+								<a class="news__item" href="#">
+									<h2 class="news__item-title">МКС предложили сделать гостиницей для космических туристов</h2>
+									<p class="news__item-text">Генеральный директор ракетно-космической корпорации "Энергия" Владимир Солнцев предложил использоват..</p>
+									<span class="news__item-time">15 Октября, 2019 </span>
+								</a>
+							</div>
+
+							<div>
+								<a class="news__item" href="#">
+									<h2 class="news__item-title">МКС предложили сделать гостиницей для космических туристов</h2>
+									<p class="news__item-text">Генеральный директор ракетно-космической корпорации "Энергия" Владимир Солнцев предложил использоват..</p>
+									<span class="news__item-time">15 Октября, 2019 </span>
+								</a>
+							</div>
+
+						</div>
+          </div>
+        </div>
+     <!-- Media :: End-->
+     
+ 
+		<!-- Media :: Start-->
+        <div class="reviews">
+          <div class="container-fluid">
+            <div class="reviews__head">
+              <h2 class="reviews__heading">Отзывы</h2>
+            </div>
+            <div class="reviews__slides reviews__slides--homepage">
+
+								<div class="reviews__item" style="width: 100%; display: inline-block;">
+									<div class="reviews__item-head">
+										<figure class="reviews__item-image">
+											<img src="./images/uzsmart-bank-1.png" alt=""></figure>
+										<h3 class="reviews__item-title">
+											<a href="#" tabindex="0">UzSmart Bank</a>
+										</h3>
+									</div>
+
+									<div class="reviews__item-body">
+										<blockquote class="reviews__item-text">Специалисты, проходящие обучение в «Корпоративных лабораториях», получают бесценный практический опы..</blockquote>
+										<a class="reviews__item-link" href="#" tabindex="0">Полный отзыв</a>
+									</div>
+									<div class="reviews__item-foot">
+										<cite class="reviews__item-author">Богдан Азимов<small>26.12.2019</small></cite>
+									</div>
+								</div>
+			
+								<div class="reviews__item" style="width: 100%; display: inline-block;">
+									<div class="reviews__item-head">
+										<figure class="reviews__item-image">
+											<img src="./images/uzsmart-bank-3.png" alt=""></figure>
+										<h3 class="reviews__item-title">
+											<a href="#" tabindex="0">UzSmart Bank</a>
+										</h3>
+									</div>
+
+									<div class="reviews__item-body">
+										<blockquote class="reviews__item-text">Специалисты, проходящие обучение в «Корпоративных лабораториях», получают бесценный практический опы..</blockquote>
+										<a class="reviews__item-link" href="#" tabindex="0">Полный отзыв</a>
+									</div>
+									<div class="reviews__item-foot">
+										<cite class="reviews__item-author">Мирзаев Алишер<small>06.11.2019</small></cite>
+									</div>
+								</div>
+
+
+								<div class="reviews__item" style="width: 100%; display: inline-block;">
+									<div class="reviews__item-head">
+										<figure class="reviews__item-image">
+											<img src="./images/uzsmart-bank-1.png" alt=""></figure>
+										<h3 class="reviews__item-title">
+											<a href="#" tabindex="0">UzSmart Bank</a>
+										</h3>
+									</div>
+
+									<div class="reviews__item-body">
+										<blockquote class="reviews__item-text">Специалисты, проходящие обучение в «Корпоративных лабораториях», получают бесценный практический опы..</blockquote>
+										<a class="reviews__item-link" href="#" tabindex="0">Полный отзыв</a>
+									</div>
+									<div class="reviews__item-foot">
+										<cite class="reviews__item-author">Арифжонов Сарвар<small>26.07.2018</small></cite>
+									</div>
+								</div>
+
+						</div>
+					</div>
+        </div>
+     <!-- Media :: End-->
+     
+ 
+        <!-- Seo :: Start-->
+        <div class="seo">
+          <div class="container-fluid">
+            <div class="row">
+			      	<div class="col-md-4 col-xl-3 offset-xl-1">
+			    			<div class="seo__logo">
+									<img src="./images/logo.png"alt="Уникальный магазин техники и гаджетов">
+									<h1>Онлайн кассы в Узбекистане</h1>
+								</div>
+							</div>
+			        <div class="col-md-8 col-xl-7 ">
+                <div class="sea__readmore js-readmore" data-more="Читать дальше" data-less="Скрыть" data-readmore="" aria-expanded="false" id="undefined1" style="max-height: none; height: 154px;">
+                  <p>На естественном языке сказать об одном и том же факте можно бесконечным числом способов. Можно переставлять слова местами, заменять их на синонимы, склонять по падежам (если говорим о языке с падежами) и тд.<br>Необходимость определять схожесть двух фраз возникла при решении одной небольшой практической задачи. <br>Я не использовал машинное обучение, не вил нейронные сети, но использовал простые метрики и собранную статистику для калибровки коэффициентов. </p>
+									<p>На естественном языке сказать об одном и том же факте можно бесконечным числом способов. Можно переставлять слова местами, заменять их на синонимы, склонять по падежам (если говорим о языке с падежами) и тд.<br>Необходимость определять схожесть двух фраз возникла при решении одной небольшой практической задачи. <br>Я не использовал машинное обучение, не вил нейронные сети, но использовал простые метрики и собранную статистику для калибровки коэффициентов. </p>
+                </div><a href="#" class="seo__readmore-link" data-readmore-toggle="undefined1" aria-controls="undefined1"><span>Читать дальше</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Seo :: End--> 
+ 
+		 
+	 
+	</main>
+      <!-- Footer :: Start-->
+<div id="popupprod" class="popup popup--1170"></div>
+     
+      <div class="popup popup--570" style="display: none;" id="popup-buy-click">
+      <button class="popup__close" data-fancybox-close="">
+       
+      </button>
+      <div class="writeus"><span class="writeus__heading">Купить в один клик</span>
+        <div class="writeus__form">
+         
+	<label class="ui-label required">Имя</label>
+	<div class="ui-field">
+		<input class="ui-input" type="text" placeholder="Имя" value="" name="name">
+	</div>
+
+	<label class="ui-label required">Телефон</label>
+	<div class="ui-field">
+		<input class="ui-input" type="text" placeholder="Телефон" value="" name="phone">
+	</div>
+
+	<label class="ui-label" style="display:none;">E-Mail</label>
+	<div class="ui-field" style="display:none;">
+		<input class="ui-input" type="text" placeholder=" E-Mail" value="" name="email">
+	</div>
+
+	<label class="ui-label">Комментарий</label>
+	<div class="ui-field">
+		<textarea class="ui-textarea" rows="5" placeholder="Комментарий" name="comment" style="overflow: hidden; overflow-wrap: break-word;"></textarea>
+	</div>
+
+        
+          <div class="writeus__action">
+          <button type="button" class="btn btn--blue js-btn-add-cart-fast quickbuy-send">Отправить заказ</button>
+          <input name="quantity" id="cat_qty" type="hidden" value="2">
+          <input name="buy-click-type" id="buy-click-type" type="hidden" value="product">
+          <input name="product_id" id="cat_prod_id" type="hidden" value="">
+          <input name="redirect" value="1" class="fast-redirect" type="hidden">
+           
+          </div>
+        </div>
+      </div>
+      </div>
+ 
+
+      <!-- Footer v1 :: Start-->
+      <footer class="footer footer--v1">
+				<div class="footer__subsc">
+          <div class="container-fluid">
+            <div class="subsc">
+              <div class="subsc__caption">Подпишись <small> будьте в курсе новостей</small></div>
+              <div class="subsc__field"> 
+                <input class="subsc__input" name="emailsubscr" type="email" value="" placeholder="Эл. почта">
+                <button type="button" class="subsc__btn js-subscribe-btn">Подписаться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+		        <div class="footer__container">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+			    						 
+						<div class="footer__logo">
+							<a href="#">
+								<img src="./images/logo.png" title="Uz smart" alt="Uz smart">
+							</a>
+						</div>
+						 
+				    <p class="footer__copyright">Инновационная мобильная онлайн касса 2 в 1 с возможностью оплаты как наличными, так и в скором времени банковской картой</p>
+              </div>
+			        <div class="col-6 push-6 col-md-4 push-md-0 col-lg-3 push-lg-3 col-xl-2 push-xl-5">
+                <div class="footer__phone">
+									<a class="footer__phone-number" rel="nofollow" href="tel:+77547845245">+(99871) 256 78 40</a>
+									<a class="footer__phone-number" rel="nofollow" href="tel:+78549654568">+(99871) 256 78 40</a>
+									<a class="footer__phone-link js-fancy-popup" href="#"><span>Обратный звонок</span></a>
+										
+						<div id="callback-footer" class="popup popup--570" style="display:none;">
+							<div class="writeus"><span class="writeus__heading">Заказать обратный звонок</span>
+								<div class="writeus__form">
+									<form class="data-callback">
+										<label class="ui-label required">Ваше имя:</label>
+										<div class="ui-field">
+											<input class="ui-input" type="text" value="" name="name" placeholder="Ваше имя:">
+										</div>
+										<label class="ui-label required">Ваш телефон:</label>
+										<div class="ui-field">
+											<input class="ui-input" type="text" value="" name="phone" placeholder="Ваш телефон:">
+										</div>
+										<label class="ui-label">Комментарий: </label>
+										<div class="ui-field">
+											<textarea class="ui-textarea" name="comment" cols="30" rows="10" placeholder="Комментарий: " style="overflow: hidden; overflow-wrap: break-word;"></textarea>
+										</div>
+							
+										<div class="writeus__action">
+											<button type="button" class="btn btn--blue contact-send">Отправить</button>
+										</div>
+							
+									</form>
+								</div>
+							</div>
+						</div>
+				  				</div>
+							</div>
+							
+			  			  <div class="col-6 pull-6 col-md-4 pull-md-0 col-lg-3 pull-lg-3 col-xl-2 push-xl-1">
+                <div class="footer__social"><span class="footer__social-heading">Мы в сети</span>
+                  <nav class="footer__social-nav">
+										<a href="https://www.facebook.com/" target="0" rel="nofollow" class="footer__social-link"><img src="./images/fb.png" alt=""></a>
+										<a href="https://www.instagram.com/" target="0" rel="nofollow" class="footer__social-link"><img src="./images/in.png" alt=""></a>
+										<a href="https://vk.com/" target="_blank" rel="nofollow" class="footer__social-link"><img src="./images/vk.png" alt=""></a>
+									</nav>
+								</div>
+								
+							</div>
+							
+			  			  <div class="col-12 col-md-8 col-lg-12 col-xl-3 pull-xl-4">
+                  <div class="footer__pay">
+										<span class="footer__pay-heading">Принимаем платежи</span>
+                    <div class="footer__pay-group">
+											<span class="footer__pay-item"><img src="./images/payme-logo.png" alt=""></span>
+											<span class="footer__pay-item"><img src="./images/click-logo.png" alt=""></span>
+										</div>
+                  </div>
+								</div>
+								
+              </div>
+          </div>
+        </div>
+      </footer>
+	  <!-- Footer v1 :: End-->
+
+ 
+      <!-- Footer :: End-->
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+		
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/app.min.js"></script>
+	 
+	</body>
+</html>
